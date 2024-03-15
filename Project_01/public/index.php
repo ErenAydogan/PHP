@@ -1,18 +1,14 @@
 <?php
     require '../helpers.php';
 
-    $routes = [
-        '/' => 'controllers/home.php',
-        '/listings' => 'controllers/listings/index.php',
-        '/listings/create' => 'controllers/listings/create.php',
-        '404' => 'controllers/error/404.php',
-    ];
+    require basePath('Router.php');
 
-    $url = $_SERVER['REQUEST_URI'];
+    $router = new Router();
 
-    if(array_key_exists($url, $routes)){
-        require(basePath($routes[$url]));
-    } else {
-        require basePath($routes['404']);
-    }
+    $routes = require basePath('routes.php');
+    
+    $uri = $_SERVER['REQUEST_URI'];
+    $method = $_SERVER['REQUEST_METHOD'];
+
+    $router -> route($uri, $method);
 ?>
