@@ -1,5 +1,3 @@
 <?php
-
-    loadView('listings/index');
-
+    require loadView('listings/index');
 ?>

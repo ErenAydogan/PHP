@@ -1,11 +1,9 @@
 <?php
-loadPartial('head');
-loadPartial('navbar');
-loadPartial('top-banner')
+    loadPartial('head');
+    loadPartial('navbar');
+    loadPartial('top-banner');
 ?>
-
-    <!-- Post a Job Form Box -->
-    <section class="flex justify-center items-center mt-20">
+        <section class="flex justify-center items-center mt-20">
       <div class="bg-white p-8 rounded-lg shadow-md w-full md:w-600 mx-6">
         <h2 class="text-4xl text-center font-bold mb-4">Create Job Listing</h2>
         <!-- <div class="message bg-red-100 p-3 my-3">This is an error message.</div>
@@ -120,9 +118,7 @@ loadPartial('top-banner')
         </form>
       </div>
     </section>
-
-
 <?php
-loadPartial('bottom-banner');
-loadPartial('footer');
+    loadPartial('bottom-banner');
+    loadPartial('footer');
 ?>
